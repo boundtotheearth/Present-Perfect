@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Present-Perfect/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/Present-Perfect/static/js/main.7866f18b.chunk.js",
-    "main.js.map": "/Present-Perfect/static/js/main.7866f18b.chunk.js.map",
+    "main.js": "/Present-Perfect/static/js/main.e376a01c.chunk.js",
+    "main.js.map": "/Present-Perfect/static/js/main.e376a01c.chunk.js.map",
     "runtime-main.js": "/Present-Perfect/static/js/runtime-main.f7f02a71.js",
     "runtime-main.js.map": "/Present-Perfect/static/js/runtime-main.f7f02a71.js.map",
-    "static/js/2.d875985a.chunk.js": "/Present-Perfect/static/js/2.d875985a.chunk.js",
-    "static/js/2.d875985a.chunk.js.map": "/Present-Perfect/static/js/2.d875985a.chunk.js.map",
+    "static/js/2.300aa607.chunk.js": "/Present-Perfect/static/js/2.300aa607.chunk.js",
+    "static/js/2.300aa607.chunk.js.map": "/Present-Perfect/static/js/2.300aa607.chunk.js.map",
     "static/js/3.b89620cf.chunk.js": "/Present-Perfect/static/js/3.b89620cf.chunk.js",
     "static/js/3.b89620cf.chunk.js.map": "/Present-Perfect/static/js/3.b89620cf.chunk.js.map",
     "index.html": "/Present-Perfect/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/Present-Perfect/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.d875985a.chunk.js.LICENSE.txt": "/Present-Perfect/static/js/2.d875985a.chunk.js.LICENSE.txt",
+    "static/js/2.300aa607.chunk.js.LICENSE.txt": "/Present-Perfect/static/js/2.300aa607.chunk.js.LICENSE.txt",
     "static/media/Achievement.0ff94327.svg": "/Present-Perfect/static/media/Achievement.0ff94327.svg",
     "static/media/Aniversary.329ba518.svg": "/Present-Perfect/static/media/Aniversary.329ba518.svg",
     "static/media/Birthday.77a71c97.svg": "/Present-Perfect/static/media/Birthday.77a71c97.svg",
@@ -23,12 +23,13 @@
     "static/media/Previous Recommendation.521c28f0.png": "/Present-Perfect/static/media/Previous Recommendation.521c28f0.png",
     "static/media/Recommendation detail.f413eea0.png": "/Present-Perfect/static/media/Recommendation detail.f413eea0.png",
     "static/media/Step 2 Filled.c60a118c.png": "/Present-Perfect/static/media/Step 2 Filled.c60a118c.png",
-    "static/media/Tinder.c044ee2a.png": "/Present-Perfect/static/media/Tinder.c044ee2a.png"
+    "static/media/Tinder.c044ee2a.png": "/Present-Perfect/static/media/Tinder.c044ee2a.png",
+    "static/media/bg.6090b756.png": "/Present-Perfect/static/media/bg.6090b756.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f7f02a71.js",
-    "static/js/2.d875985a.chunk.js",
+    "static/js/2.300aa607.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.7866f18b.chunk.js"
+    "static/js/main.e376a01c.chunk.js"
   ]
 }
