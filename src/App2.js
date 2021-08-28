@@ -9,6 +9,7 @@ import PrevRec from "./PP_Screens/Previous Recommendation.png"
 import Socials from "./PP_Screens/Step 2 Filled.png"
 import Tinder from "./PP_Screens/Tinder.png"
 import RecDetail from "./PP_Screens/Recommendation detail.png"
+import bgImage from "./bg.png"
 
 import { Grid, SvgIcon, Stepper, Step, StepLabel, Box, Divider, Typography, TextField } from "@material-ui/core";
 
@@ -36,12 +37,16 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: 200,
         paddingRight: 200
       },
+      backgroundImage: `url(${bgImage})`
   },
   emailField: {
       width: "100%"
   },
   emailButton: {
       minWidth: 200
+  },
+  bgImage: {
+      objectFit: 'cover'
   }
 }))
 
