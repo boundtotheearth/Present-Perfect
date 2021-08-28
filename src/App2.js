@@ -101,7 +101,7 @@ const App = (props) => {
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Button className={classes.emailButton} variant="contained" color="primary" width="100%" height="100%">
-                        Get Started Here
+                    Let Me Know
                     </Button>
                 </Grid>
             </Grid>
@@ -132,6 +132,7 @@ const App = (props) => {
                     "Get the most relevant, up-to-date info"
                 ]}
                 buttonText='Try It Now'
+                reverse
             />
             <Divider/>
             <KeyPoint
@@ -156,18 +157,14 @@ const App = (props) => {
                     "Get the most relevant, up-to-date info"
                 ]}
                 buttonText='Get Started Now'
+                reverse
             />
 
         </Grid>
         <Divider/>
-        <Grid item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
+        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
             <Grid item>
                 <img src={logo}/>
-            </Grid>
-            <Grid item>
-            <h1 className={classes.title}>
-                The perfect gift for every occasion
-            </h1>
             </Grid>
             <Grid item>
             <h3 className={classes.subtitle}>
@@ -185,7 +182,7 @@ const App = (props) => {
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Button className={classes.emailButton} variant="contained" color="primary" width="100%" height="100%">
-                        Get Started Here
+                        Let Me Know
                     </Button>
                 </Grid>
             </Grid>
@@ -197,7 +194,8 @@ const App = (props) => {
 
 const KeyPoint = (props) => {
     const classes = useStyles()
-    const {title, image, subtitles, buttonText} = props
+    const {title, image, subtitles, buttonText, reverse} = props
+    const direction = reverse ? 'row-reverse' : 'reverse'
     return (
     <Grid className={classes.fullScreen} item container justifyContent='center' alignItems='stretch' spacing={5}>
         <Grid item xs={12}>
@@ -205,7 +203,7 @@ const KeyPoint = (props) => {
                 {title}
             </h1>
         </Grid>
-        <Grid item container justifyContent='center' xs={12} alignItems='stretch' spacing={10}>
+        <Grid item container direction={direction} justifyContent='center' xs={12} alignItems='stretch' spacing={10}>
             <Grid item container xs={12} sm={5} justifyContent='center'>
                 <img src={image} height="100%" width='90%'/>
             </Grid>
