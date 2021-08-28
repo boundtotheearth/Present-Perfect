@@ -10,9 +10,9 @@ import Socials from "./PP_Screens/Step 2 Filled.png"
 import Tinder from "./PP_Screens/Tinder.png"
 import RecDetail from "./PP_Screens/Recommendation detail.png"
 
-import { Grid, SvgIcon, Stepper, Step, StepLabel, Box, Divider } from "@material-ui/core";
+import { Grid, SvgIcon, Stepper, Step, StepLabel, Box, Divider, Typography, TextField } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   title: {
     textAlign: 'center'
   },
@@ -22,8 +22,28 @@ const useStyles = makeStyles({
   actionButton: {
       width: "50%",
       height: 40
+  },
+  fullScreen: {
+      minHeight: "100vh",
+      minWidth: "100wh",
+      paddingTop: 50,
+      paddingBottom: 50,
+      [theme.breakpoints.down("sm")]: {
+          paddingLeft: 20,
+          paddingRight: 20
+      },
+      [theme.breakpoints.up("md")]: {
+        paddingLeft: 200,
+        paddingRight: 200
+      },
+  },
+  emailField: {
+      width: "100%"
+  },
+  emailButton: {
+      minWidth: 200
   }
-})
+}))
 
 const theme = createTheme({
   palette: {
@@ -37,6 +57,11 @@ const theme = createTheme({
       main: "#c88787",
       contrastText: "#fffffc"
     }
+  },
+  typography: {
+      fontFamily: [
+          'Varela Round'
+      ].join(','),
   }
 });
 
@@ -46,21 +71,45 @@ const App = (props) => {
   return (
     <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div height="100vh">
-            <Grid item container direction="column" justifyContent='center' alignItems='center'>
+        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
+            <Grid item>
                 <img src={logo}/>
-                <h1 className={classes.title}>
-                    The perfect gift for every occasion
-                </h1>
-                <Button className={classes.actionButton} variant="contained" color="primary" size='large'>
-                    Get it here
-                </Button>
             </Grid>
-        </div>
-        
+            <Grid item>
+            <h1 className={classes.title}>
+                The perfect gift for every occasion
+            </h1>
+            </Grid>
+            <Grid item>
+            <h2 className={classes.subtitle}>
+                AI powered gift recommendations for your loved ones
+            </h2>
+            </Grid>
+            <Grid item>
+            <h3 className={classes.subtitle}>
+                (Coming Soon)
+            </h3>
+            </Grid>
+            <Grid item>
+            <h3 className={classes.subtitle}>
+                We'll let you know when the app is ready
+            </h3>
+            </Grid>
+            <Grid item container justifyContent='center' alignItems='center' alignContent='center' spacing={2}>
+                <Grid item xs={12} md={8}>
+                    <TextField className={classes.emailField} id="outlined-basic" label="Enter your email address" variant="outlined" />
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <Button className={classes.emailButton} variant="contained" color="primary" width="100%" height="100%">
+                        Get Started Here
+                    </Button>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+        <Divider/>
         <Grid
             justifyContent="center"
-            spacing={10}
         >
             <KeyPoint 
                 title='Discover their interests through their social media posts'
@@ -72,7 +121,9 @@ const App = (props) => {
                 ]}
                 buttonText='Find Out How'
             />
+            <Divider/>
             <KeyPoint 
+                className={classes.fullScreen}
                 title='Satisfaction guarenteed with facts and evidence'
                 image={RecDetail}
                 subtitles={[
@@ -82,7 +133,9 @@ const App = (props) => {
                 ]}
                 buttonText='Try It Now'
             />
-            <KeyPoint 
+            <Divider/>
+            <KeyPoint
+                className={classes.fullScreen}
                 title='Shop for gifts with our AI-powered recommendation system'
                 image={Tinder}
                 subtitles={[
@@ -92,7 +145,9 @@ const App = (props) => {
                 ]}
                 buttonText='Try It Now'
             />
-            <KeyPoint 
+            <Divider/>
+            <KeyPoint
+                className={classes.fullScreen}
                 title='All your past recommendations at your fingertips'
                 image={PrevRec}
                 subtitles={[
@@ -102,6 +157,39 @@ const App = (props) => {
                 ]}
                 buttonText='Get Started Now'
             />
+
+        </Grid>
+        <Divider/>
+        <Grid item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
+            <Grid item>
+                <img src={logo}/>
+            </Grid>
+            <Grid item>
+            <h1 className={classes.title}>
+                The perfect gift for every occasion
+            </h1>
+            </Grid>
+            <Grid item>
+            <h3 className={classes.subtitle}>
+                (Coming Soon)
+            </h3>
+            </Grid>
+            <Grid item>
+            <h3 className={classes.subtitle}>
+                We'll let you know when the app is ready
+            </h3>
+            </Grid>
+            <Grid item container justifyContent='center' alignItems='center' alignContent='center' spacing={2}>
+                <Grid item xs={12} md={8}>
+                    <TextField className={classes.emailField} id="outlined-basic" label="Enter your email address" variant="outlined" />
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <Button className={classes.emailButton} variant="contained" color="primary" width="100%" height="100%">
+                        Get Started Here
+                    </Button>
+                </Grid>
+            </Grid>
+            
         </Grid>
     </ThemeProvider>
   );
@@ -111,14 +199,14 @@ const KeyPoint = (props) => {
     const classes = useStyles()
     const {title, image, subtitles, buttonText} = props
     return (
-    <Grid item container justifyContent='center' alignItems='stretch'>
+    <Grid className={classes.fullScreen} item container justifyContent='center' alignItems='stretch' spacing={5}>
         <Grid item xs={12}>
             <h1 className={classes.title}>
                 {title}
             </h1>
         </Grid>
-        <Grid item container justifyContent='center' xs={12} alignItems='center' spacing={10}>
-            <Grid item container xs={12} md={5} justifyContent='center'>
+        <Grid item container justifyContent='center' xs={12} alignItems='stretch' spacing={10}>
+            <Grid item container xs={12} sm={5} justifyContent='center'>
                 <img src={image} height="100%" width='90%'/>
             </Grid>
             <Grid item container xs={12} md={7} direction="column" justifyContent='center' alignItems='center'>
