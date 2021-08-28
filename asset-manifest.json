@@ -1,24 +1,17 @@
 {
   "files": {
     "main.css": "/Present-Perfect/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/Present-Perfect/static/js/main.3ddf4f75.chunk.js",
-    "main.js.map": "/Present-Perfect/static/js/main.3ddf4f75.chunk.js.map",
-    "runtime-main.js": "/Present-Perfect/static/js/runtime-main.f7f02a71.js",
-    "runtime-main.js.map": "/Present-Perfect/static/js/runtime-main.f7f02a71.js.map",
-    "static/js/2.300aa607.chunk.js": "/Present-Perfect/static/js/2.300aa607.chunk.js",
-    "static/js/2.300aa607.chunk.js.map": "/Present-Perfect/static/js/2.300aa607.chunk.js.map",
-    "static/js/3.b89620cf.chunk.js": "/Present-Perfect/static/js/3.b89620cf.chunk.js",
-    "static/js/3.b89620cf.chunk.js.map": "/Present-Perfect/static/js/3.b89620cf.chunk.js.map",
+    "main.js": "/Present-Perfect/static/js/main.bc1ecac8.chunk.js",
+    "main.js.map": "/Present-Perfect/static/js/main.bc1ecac8.chunk.js.map",
+    "runtime-main.js": "/Present-Perfect/static/js/runtime-main.125b32b7.js",
+    "runtime-main.js.map": "/Present-Perfect/static/js/runtime-main.125b32b7.js.map",
+    "static/js/2.1bb2663f.chunk.js": "/Present-Perfect/static/js/2.1bb2663f.chunk.js",
+    "static/js/2.1bb2663f.chunk.js.map": "/Present-Perfect/static/js/2.1bb2663f.chunk.js.map",
+    "static/js/3.f8f095bd.chunk.js": "/Present-Perfect/static/js/3.f8f095bd.chunk.js",
+    "static/js/3.f8f095bd.chunk.js.map": "/Present-Perfect/static/js/3.f8f095bd.chunk.js.map",
     "index.html": "/Present-Perfect/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/Present-Perfect/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.300aa607.chunk.js.LICENSE.txt": "/Present-Perfect/static/js/2.300aa607.chunk.js.LICENSE.txt",
-    "static/media/Achievement.0ff94327.svg": "/Present-Perfect/static/media/Achievement.0ff94327.svg",
-    "static/media/Aniversary.329ba518.svg": "/Present-Perfect/static/media/Aniversary.329ba518.svg",
-    "static/media/Birthday.77a71c97.svg": "/Present-Perfect/static/media/Birthday.77a71c97.svg",
-    "static/media/Christmas.7a693085.svg": "/Present-Perfect/static/media/Christmas.7a693085.svg",
-    "static/media/Father.cfb9f5fb.svg": "/Present-Perfect/static/media/Father.cfb9f5fb.svg",
-    "static/media/Mother.16ffd554.svg": "/Present-Perfect/static/media/Mother.16ffd554.svg",
-    "static/media/Others.bf61af92.svg": "/Present-Perfect/static/media/Others.bf61af92.svg",
+    "static/js/2.1bb2663f.chunk.js.LICENSE.txt": "/Present-Perfect/static/js/2.1bb2663f.chunk.js.LICENSE.txt",
     "static/media/PP_Logo_Full.6686619d.svg": "/Present-Perfect/static/media/PP_Logo_Full.6686619d.svg",
     "static/media/Previous Recommendation.521c28f0.png": "/Present-Perfect/static/media/Previous Recommendation.521c28f0.png",
     "static/media/Recommendation detail.f413eea0.png": "/Present-Perfect/static/media/Recommendation detail.f413eea0.png",
@@ -27,9 +20,9 @@
     "static/media/bg.09253676.png": "/Present-Perfect/static/media/bg.09253676.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f7f02a71.js",
-    "static/js/2.300aa607.chunk.js",
+    "static/js/runtime-main.125b32b7.js",
+    "static/js/2.1bb2663f.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.3ddf4f75.chunk.js"
+    "static/js/main.bc1ecac8.chunk.js"
   ]
 }
