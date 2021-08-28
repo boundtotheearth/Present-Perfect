@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
       paddingTop: 50,
       paddingBottom: 50,
       [theme.breakpoints.down("sm")]: {
-          paddingLeft: 20,
-          paddingRight: 20
+          paddingLeft: 50,
+          paddingRight: 50
       },
       [theme.breakpoints.up("md")]: {
         paddingLeft: 200,
@@ -40,11 +40,13 @@ const useStyles = makeStyles(theme => ({
       backgroundImage: `url(${bgImage})`
   },
   emailField: {
-      width: "100%"
-  },
-  emailButton: {
-      minWidth: 200
-  },
+    width: "100%",
+    minWidth: 200
+    },
+    emailButton: {
+        width: "20%",
+        minWidth: 200
+    },
   bgImage: {
       objectFit: 'cover'
   }
@@ -101,10 +103,12 @@ const App = (props) => {
             </h3>
             </Grid>
             <Grid item container justifyContent='center' alignItems='center' alignContent='center' spacing={2}>
-                <Grid item xs={12} md={8}>
-                    <TextField className={classes.emailField} id="outlined-basic" label="Enter your email address" variant="outlined" />
+                <Grid item xs={12} md={6}>
+                  <Box width="100%" className={classes.emailField}>
+                    <TextField fullWidth label="Enter your email address" variant="outlined" />
+                  </Box>
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item>
                     <Button className={classes.emailButton} variant="contained" color="primary" width="100%" height="100%">
                     Let Me Know
                     </Button>
