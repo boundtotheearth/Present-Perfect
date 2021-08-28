@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider, createTheme, makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Carousel from "react-material-ui-carousel";
 
 import logo from "./PP_Logo_Full.svg"
 import PrevRec from "./PP_Screens/Previous Recommendation.png"
@@ -68,10 +69,15 @@ const useStyles = makeStyles(theme => ({
     width: 50
   },
   background: {
-    backgroundImage: `url(${bgImage})`
+    backgroundImage: `url(${bgImage})`,
+    backgroundRepeat: 'repeat-y'
   },
   border: {
-    borderStyle: 'solid'
+    borderStyle: 'solid',
+  },
+  keyPointImage: {
+    objectFit: 'contain',
+    height: "60vh",
   }
 }))
 
@@ -172,9 +178,121 @@ const App = (props) => {
             </h3>
           </Grid>
         </Grid>
+        <Carousel className={classes.contentPoints}>
+          <KeyPoint 
+                title='Discover their interests through their social media posts'
+                image={Socials}
+                subtitles={[
+                    'Automatically look through their social media posts',
+                    "Find out what they're thinking about",
+                    "Get the most relevant, up-to-date information"
+                ]}
+                buttonText='Find Out How'
+            />
+            <KeyPoint 
+                className={classes.fullScreen}
+                title='Satisfaction guarenteed with facts and evidence'
+                image={RecDetail}
+                subtitles={[
+                    'Know exactly which posts inspired the recommendation',
+                    "Find out what they think before you buy",
+                    "Have confidence in your choices"
+                ]}
+                buttonText='Try It Now'
+                reverse
+            />
+            <KeyPoint
+                className={classes.fullScreen}
+                title='Shop for gifts with our AI-powered recommendation system'
+                image={Tinder}
+                subtitles={[
+                    'Swipe to see better recommendations',
+                    "Narrow down your preferred gifts",
+                    "Get the shopping experience anytime"
+                ]}
+                buttonText='Try It Now'
+            />
+            <KeyPoint
+                className={classes.fullScreen}
+                title='All your past recommendations at your fingertips'
+                image={PrevRec}
+                subtitles={[
+                    'Look at the gifts that you previously shortlisted',
+                    "Remembers the profiles you entered previously",
+                    "Find a new gift without having to enter the information again"
+                ]}
+                buttonText='Get Started Now'
+                reverse
+            />
+        </Carousel>
+        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
+            <Grid item>
+                <img src={logo}/>
+            </Grid>
+            <Grid item>
+            <h3 className={classes.subtitle}>
+                (Coming Soon)
+            </h3>
+            </Grid>
+            <Grid item>
+            <h3 className={classes.subtitle}>
+                We'll let you know when the app is ready
+            </h3>
+            </Grid>
+            <Grid item container justifyContent='center' alignItems='center' alignContent='center' spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <Box width="100%">
+                    <TextField fullWidth label="Enter your email address" variant="outlined" />
+                  </Box>
+                </Grid>
+                <Grid item>
+                    <Button className={classes.emailButton} variant="contained" color="primary" width="100%" height="100%">
+                    Let Me Know
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
         </Box>
     </ThemeProvider>
   );
 };
+
+
+const KeyPoint = (props) => {
+  const classes = useStyles()
+  const {title, image, subtitles, buttonText, reverse} = props
+  const direction = reverse ? 'row-reverse' : 'reverse'
+  return (
+  <Grid className={classes.fullScreen} item container justifyContent='center' alignItems='stretch' spacing={2}>
+      <Grid item xs={12}>
+          <h1 className={classes.title}>
+              {title}
+          </h1>
+      </Grid>
+      <Grid item container direction={direction} justifyContent='center' xs={12} alignItems='stretch' spacing={10}>
+          <Grid item container xs={12} lg={5} justifyContent='center'>
+              <img src={image} className={classes.keyPointImage}/>
+          </Grid>
+          <Grid item container xs={12} lg={7} direction="column" justifyContent='center' alignItems='center'>
+              {subtitles.map((subtitle) => {
+                  return (
+                  <Grid item>
+                      <h2 className={classes.subtitle}>
+                          {subtitle}
+                      </h2>
+                  </Grid>
+                  );}
+              )}
+              
+              <Grid item container justifyContent='center'>
+                  <Button className={classes.actionButton} variant="contained" color="primary" size='large'>
+                      {buttonText}
+                  </Button>
+              </Grid>
+          </Grid>
+      </Grid>
+  </Grid>
+  );
+}
 
 export default App
