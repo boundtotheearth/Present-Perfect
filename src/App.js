@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   actionButton: {
       width: "50%",
+      minWidth: "200",
       height: 40
   },
   fullScreen: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.up("md")]: {
         paddingLeft: 150,
         paddingRight: 150
-      }
+      },
   },
   emailField: {
       width: "100%",
@@ -53,6 +54,7 @@ const useStyles = makeStyles(theme => ({
   },
   contentPoints: {
     minHeight: "50vh",
+    maxWidth: "100wh",
     paddingTop: 10,
     paddingBottom: 10,
     [theme.breakpoints.down("sm")]: {
@@ -60,9 +62,12 @@ const useStyles = makeStyles(theme => ({
       paddingRight: 50
     },
     [theme.breakpoints.up("md")]: {
-      paddingLeft: 150,
-      paddingRight: 150
-    }
+      paddingLeft: 120,
+      paddingRight: 120
+    },
+  },
+  contentPoint: {
+    padding: 20
   },
   bigIcon: {
     height: 50,
@@ -108,7 +113,7 @@ const App = (props) => {
     <ThemeProvider theme={theme}>
         <CssBaseline />
         <Box className={classes.background}>
-        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
+        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center'>
             <Grid item>
                 <img src={logo}/>
             </Grid>
@@ -145,9 +150,9 @@ const App = (props) => {
                 </Grid>
             </Grid>
         </Grid>
-        <Grid className={classes.contentPoints} container justifyContent='center' alignContent='center' alignItems='space-evenly' direction='row' spacing={10}>
-          <Grid item container direction='column' xs={12} md={4}>
-            <Grid item container direction='row'>
+        <Grid className={classes.contentPoints} container justifyContent='center' alignContent='center' alignItems='space-evenly' direction='row'>
+          <Grid className={classes.contentPoint} item container direction='column' xs={12} md={4}>
+            <Grid item direction='row'>
               <Facebook className={classes.bigIcon}/>
               <Twitter className={classes.bigIcon}/>
               <Instagram className={classes.bigIcon}/>
@@ -159,7 +164,7 @@ const App = (props) => {
               Don't know what they like? We'll find their latest interests from their social media posts. Stop speculating and have confidence that your gift is exactly what they're looking for.
             </h3>
           </Grid>
-          <Grid item container direction='column' xs={12} md={4}>
+          <Grid className={classes.contentPoint} item direction='column' xs={12} md={4}>
             <FavoriteBorder className={classes.bigIcon}/>
             <h2>
               AI-powered recommendation system
@@ -168,7 +173,7 @@ const App = (props) => {
               Not sure what to buy? Let our cutting edge AI recommendation system find the perfect gift for you. Simply swipe to give us some ideas, and we'll improve our recommendations.
             </h3>
           </Grid>
-          <Grid item container direction='column' xs={12} md={4}>
+          <Grid className={classes.contentPoint} item direction='column' xs={12} md={4}>
             <History className={classes.bigIcon}/>
             <h2>
               Past recommendations at your fingertips
@@ -225,7 +230,7 @@ const App = (props) => {
                 reverse
             />
         </Carousel>
-        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center' spacing={2}>
+        <Grid className={classes.fullScreen} item container direction="column" justifyContent='center' alignItems='center'>
             <Grid item>
                 <img src={logo}/>
             </Grid>
