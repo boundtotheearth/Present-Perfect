@@ -12,7 +12,7 @@ import Tinder from "./PP_Screens/Tinder.png"
 import RecDetail from "./PP_Screens/Recommendation detail.png"
 import bgImage from "./bg.png"
 
-import { Grid, SvgIcon, Stepper, Step, StepLabel, Box, Divider, Typography, TextField } from "@material-ui/core";
+import { Grid, SvgIcon, Stepper, Step, StepLabel, Box, Divider, Typography, TextField, Hidden } from "@material-ui/core";
 import { Facebook, FavoriteBorder, History, Instagram, Twitter } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
@@ -279,13 +279,20 @@ const KeyPoint = (props) => {
               <img src={image} className={classes.keyPointImage}/>
           </Grid>
           <Grid item container xs={12} lg={7} direction="column" justifyContent='center' alignItems='center' alignContent="center">
-              {subtitles.map((subtitle) => {
+              <Grid item>
+                <h2 className={classes.subtitle}>
+                    {subtitles[0]}
+                </h2>
+              </Grid>
+              {subtitles.slice(1).map((subtitle) => {
                   return (
-                  <Grid item>
+                  <Hidden mdDown>
+                    <Grid item>
                       <h2 className={classes.subtitle}>
                           {subtitle}
                       </h2>
-                  </Grid>
+                    </Grid>
+                  </Hidden>
                   );}
               )}
               
