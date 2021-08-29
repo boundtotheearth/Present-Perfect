@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   actionButton: {
       width: "50%",
-      minWidth: "200",
+      minWidth: 200,
       height: 40
   },
   fullScreen: {
@@ -268,17 +268,17 @@ const KeyPoint = (props) => {
   const {title, image, subtitles, buttonText, reverse} = props
   const direction = reverse ? 'row-reverse' : 'reverse'
   return (
-  <Grid className={classes.fullScreen} item container justifyContent='center' alignItems='stretch' spacing={2}>
+  <Grid item container justifyContent='center' alignItems='stretch' spacing={2}>
       <Grid item xs={12}>
           <h1 className={classes.title}>
               {title}
           </h1>
       </Grid>
-      <Grid item container direction={direction} justifyContent='center' xs={12} alignItems='stretch' spacing={10}>
+      <Grid item container direction={direction} justifyContent='center' xs={12} alignItems='center' alignContent="center" spacing={10}>
           <Grid item container xs={12} lg={5} justifyContent='center'>
               <img src={image} className={classes.keyPointImage}/>
           </Grid>
-          <Grid item container xs={12} lg={7} direction="column" justifyContent='center' alignItems='center'>
+          <Grid item container xs={12} lg={7} direction="column" justifyContent='center' alignItems='center' alignContent="center">
               {subtitles.map((subtitle) => {
                   return (
                   <Grid item>
